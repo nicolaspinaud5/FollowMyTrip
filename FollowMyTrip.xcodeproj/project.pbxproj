@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC76E45A1E1DE07A00773798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76E4591E1DE07A00773798 /* AppDelegate.swift */; };
+		DC76E45C1E1DE07A00773798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76E45B1E1DE07A00773798 /* ViewController.swift */; };
+		DC76E45F1E1DE07A00773798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC76E45D1E1DE07A00773798 /* Main.storyboard */; };
+		DC76E4611E1DE07A00773798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC76E4601E1DE07A00773798 /* Assets.xcassets */; };
+		DC76E4641E1DE07A00773798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC76E4621E1DE07A00773798 /* LaunchScreen.storyboard */; };
+		DC76E46F1E1DE07A00773798 /* FollowMyTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76E46E1E1DE07A00773798 /* FollowMyTripTests.swift */; };
+		DC76E47A1E1DE07A00773798 /* FollowMyTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76E4791E1DE07A00773798 /* FollowMyTripUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC76E46B1E1DE07A00773798 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC76E44E1E1DE07A00773798 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC76E4551E1DE07A00773798;
+			remoteInfo = FollowMyTrip;
+		};
+		DC76E4761E1DE07A00773798 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC76E44E1E1DE07A00773798 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC76E4551E1DE07A00773798;
+			remoteInfo = FollowMyTrip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC76E4561E1DE07A00773798 /* FollowMyTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMyTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC76E4591E1DE07A00773798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC76E45B1E1DE07A00773798 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC76E45E1E1DE07A00773798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC76E4601E1DE07A00773798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC76E4631E1DE07A00773798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC76E4651E1DE07A00773798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC76E46A1E1DE07A00773798 /* FollowMyTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FollowMyTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC76E46E1E1DE07A00773798 /* FollowMyTripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMyTripTests.swift; sourceTree = "<group>"; };
+		DC76E4701E1DE07A00773798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC76E4751E1DE07A00773798 /* FollowMyTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FollowMyTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC76E4791E1DE07A00773798 /* FollowMyTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMyTripUITests.swift; sourceTree = "<group>"; };
+		DC76E47B1E1DE07A00773798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC76E4531E1DE07A00773798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC76E4671E1DE07A00773798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC76E4721E1DE07A00773798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC76E44D1E1DE07A00773798 = {
+			isa = PBXGroup;
+			children = (
+				DC76E4581E1DE07A00773798 /* FollowMyTrip */,
+				DC76E46D1E1DE07A00773798 /* FollowMyTripTests */,
+				DC76E4781E1DE07A00773798 /* FollowMyTripUITests */,
+				DC76E4571E1DE07A00773798 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC76E4571E1DE07A00773798 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC76E4561E1DE07A00773798 /* FollowMyTrip.app */,
+				DC76E46A1E1DE07A00773798 /* FollowMyTripTests.xctest */,
+				DC76E4751E1DE07A00773798 /* FollowMyTripUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC76E4581E1DE07A00773798 /* FollowMyTrip */ = {
+			isa = PBXGroup;
+			children = (
+				DC76E4591E1DE07A00773798 /* AppDelegate.swift */,
+				DC76E45B1E1DE07A00773798 /* ViewController.swift */,
+				DC76E45D1E1DE07A00773798 /* Main.storyboard */,
+				DC76E4601E1DE07A00773798 /* Assets.xcassets */,
+				DC76E4621E1DE07A00773798 /* LaunchScreen.storyboard */,
+				DC76E4651E1DE07A00773798 /* Info.plist */,
+			);
+			path = FollowMyTrip;
+			sourceTree = "<group>";
+		};
+		DC76E46D1E1DE07A00773798 /* FollowMyTripTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC76E46E1E1DE07A00773798 /* FollowMyTripTests.swift */,
+				DC76E4701E1DE07A00773798 /* Info.plist */,
+			);
+			path = FollowMyTripTests;
+			sourceTree = "<group>";
+		};
+		DC76E4781E1DE07A00773798 /* FollowMyTripUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC76E4791E1DE07A00773798 /* FollowMyTripUITests.swift */,
+				DC76E47B1E1DE07A00773798 /* Info.plist */,
+			);
+			path = FollowMyTripUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC76E4551E1DE07A00773798 /* FollowMyTrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC76E47E1E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTrip" */;
+			buildPhases = (
+				DC76E4521E1DE07A00773798 /* Sources */,
+				DC76E4531E1DE07A00773798 /* Frameworks */,
+				DC76E4541E1DE07A00773798 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FollowMyTrip;
+			productName = FollowMyTrip;
+			productReference = DC76E4561E1DE07A00773798 /* FollowMyTrip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC76E4691E1DE07A00773798 /* FollowMyTripTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC76E4811E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTripTests" */;
+			buildPhases = (
+				DC76E4661E1DE07A00773798 /* Sources */,
+				DC76E4671E1DE07A00773798 /* Frameworks */,
+				DC76E4681E1DE07A00773798 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC76E46C1E1DE07A00773798 /* PBXTargetDependency */,
+			);
+			name = FollowMyTripTests;
+			productName = FollowMyTripTests;
+			productReference = DC76E46A1E1DE07A00773798 /* FollowMyTripTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC76E4741E1DE07A00773798 /* FollowMyTripUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC76E4841E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTripUITests" */;
+			buildPhases = (
+				DC76E4711E1DE07A00773798 /* Sources */,
+				DC76E4721E1DE07A00773798 /* Frameworks */,
+				DC76E4731E1DE07A00773798 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC76E4771E1DE07A00773798 /* PBXTargetDependency */,
+			);
+			name = FollowMyTripUITests;
+			productName = FollowMyTripUITests;
+			productReference = DC76E4751E1DE07A00773798 /* FollowMyTripUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC76E44E1E1DE07A00773798 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = van;
+				TargetAttributes = {
+					DC76E4551E1DE07A00773798 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = M4HUHE4B9M;
+						ProvisioningStyle = Automatic;
+					};
+					DC76E4691E1DE07A00773798 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = M4HUHE4B9M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC76E4551E1DE07A00773798;
+					};
+					DC76E4741E1DE07A00773798 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = M4HUHE4B9M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC76E4551E1DE07A00773798;
+					};
+				};
+			};
+			buildConfigurationList = DC76E4511E1DE07A00773798 /* Build configuration list for PBXProject "FollowMyTrip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC76E44D1E1DE07A00773798;
+			productRefGroup = DC76E4571E1DE07A00773798 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC76E4551E1DE07A00773798 /* FollowMyTrip */,
+				DC76E4691E1DE07A00773798 /* FollowMyTripTests */,
+				DC76E4741E1DE07A00773798 /* FollowMyTripUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC76E4541E1DE07A00773798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC76E4641E1DE07A00773798 /* LaunchScreen.storyboard in Resources */,
+				DC76E4611E1DE07A00773798 /* Assets.xcassets in Resources */,
+				DC76E45F1E1DE07A00773798 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC76E4681E1DE07A00773798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC76E4731E1DE07A00773798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC76E4521E1DE07A00773798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC76E45C1E1DE07A00773798 /* ViewController.swift in Sources */,
+				DC76E45A1E1DE07A00773798 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC76E4661E1DE07A00773798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC76E46F1E1DE07A00773798 /* FollowMyTripTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC76E4711E1DE07A00773798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC76E47A1E1DE07A00773798 /* FollowMyTripUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC76E46C1E1DE07A00773798 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC76E4551E1DE07A00773798 /* FollowMyTrip */;
+			targetProxy = DC76E46B1E1DE07A00773798 /* PBXContainerItemProxy */;
+		};
+		DC76E4771E1DE07A00773798 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC76E4551E1DE07A00773798 /* FollowMyTrip */;
+			targetProxy = DC76E4761E1DE07A00773798 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC76E45D1E1DE07A00773798 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC76E45E1E1DE07A00773798 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC76E4621E1DE07A00773798 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC76E4631E1DE07A00773798 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC76E47C1E1DE07A00773798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC76E47D1E1DE07A00773798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC76E47F1E1DE07A00773798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M4HUHE4B9M;
+				INFOPLIST_FILE = FollowMyTrip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.van.FollowMyTrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DC76E4801E1DE07A00773798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M4HUHE4B9M;
+				INFOPLIST_FILE = FollowMyTrip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.van.FollowMyTrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DC76E4821E1DE07A00773798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M4HUHE4B9M;
+				INFOPLIST_FILE = FollowMyTripTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.van.FollowMyTripTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FollowMyTrip.app/FollowMyTrip";
+			};
+			name = Debug;
+		};
+		DC76E4831E1DE07A00773798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M4HUHE4B9M;
+				INFOPLIST_FILE = FollowMyTripTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.van.FollowMyTripTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FollowMyTrip.app/FollowMyTrip";
+			};
+			name = Release;
+		};
+		DC76E4851E1DE07A00773798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = M4HUHE4B9M;
+				INFOPLIST_FILE = FollowMyTripUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.van.FollowMyTripUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FollowMyTrip;
+			};
+			name = Debug;
+		};
+		DC76E4861E1DE07A00773798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = M4HUHE4B9M;
+				INFOPLIST_FILE = FollowMyTripUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.van.FollowMyTripUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FollowMyTrip;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC76E4511E1DE07A00773798 /* Build configuration list for PBXProject "FollowMyTrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC76E47C1E1DE07A00773798 /* Debug */,
+				DC76E47D1E1DE07A00773798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC76E47E1E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC76E47F1E1DE07A00773798 /* Debug */,
+				DC76E4801E1DE07A00773798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC76E4811E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTripTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC76E4821E1DE07A00773798 /* Debug */,
+				DC76E4831E1DE07A00773798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC76E4841E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTripUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC76E4851E1DE07A00773798 /* Debug */,
+				DC76E4861E1DE07A00773798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC76E44E1E1DE07A00773798 /* Project object */;
+}
