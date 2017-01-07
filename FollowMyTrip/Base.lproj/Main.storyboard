@@ -46,7 +46,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PYO-75-Mca" kind="show" identifier="ListView" id="CQS-UB-vBE"/>
+                                    <segue destination="zm0-Oa-5Lg" kind="show" identifier="ListView" id="k4f-gY-g6g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,50 +75,51 @@
             <point key="canvasLocation" x="617" y="141"/>
         </scene>
         <!--Saved List Table View Controller-->
-        <scene sceneID="65n-c9-hAN">
+        <scene sceneID="NHC-Dq-lCi">
             <objects>
-                <tableViewController id="PYO-75-Mca" customClass="SavedListTableViewController" customModule="FollowMyTrip" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SdE-fJ-jOD">
+                <tableViewController id="zm0-Oa-5Lg" customClass="SavedListTableViewController" customModule="FollowMyTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GXa-mE-CUy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="6UO-Pb-yHT" customClass="SavedListTableViewCell" customModule="FollowMyTrip" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ZcY-Wi-dch" customClass="SavedListTableViewCell" customModule="FollowMyTrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6UO-Pb-yHT" id="fNg-6b-uy9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZcY-Wi-dch" id="764-vm-FAn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-k7-cdj">
-                                            <rect key="frame" x="12" y="11" width="355" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM7-fm-fkK">
+                                            <rect key="frame" x="13" y="11" width="354" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ZBh-k7-cdj" firstAttribute="leading" secondItem="fNg-6b-uy9" secondAttribute="leadingMargin" constant="4" id="AaN-np-rVn"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="ZBh-k7-cdj" secondAttribute="bottom" constant="3" id="Mqs-V2-JAt"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ZBh-k7-cdj" secondAttribute="trailing" id="eYJ-yC-WA2"/>
-                                        <constraint firstItem="ZBh-k7-cdj" firstAttribute="top" secondItem="fNg-6b-uy9" secondAttribute="topMargin" constant="3" id="s0p-xV-Arq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zM7-fm-fkK" secondAttribute="trailing" id="P73-t3-Cob"/>
+                                        <constraint firstItem="zM7-fm-fkK" firstAttribute="leading" secondItem="764-vm-FAn" secondAttribute="leadingMargin" constant="5" id="Xn5-q4-xRg"/>
+                                        <constraint firstItem="zM7-fm-fkK" firstAttribute="top" secondItem="764-vm-FAn" secondAttribute="topMargin" constant="3" id="gK5-IR-afA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zM7-fm-fkK" secondAttribute="bottom" constant="3" id="ozF-Tm-OLK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.80231511779999998" green="0.77771632189999995" blue="0.64539191829999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="positionNameLabel" destination="ZBh-k7-cdj" id="ruf-zE-MDh"/>
-                                    <segue destination="B1B-8n-Hgz" kind="show" identifier="DetailsView" id="FXJ-3N-7FH"/>
+                                    <outlet property="positionNameLabel" destination="zM7-fm-fkK" id="Ty4-bf-gOg"/>
+                                    <segue destination="B1B-8n-Hgz" kind="show" identifier="DetailsView" id="av6-c0-H2H"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="PYO-75-Mca" id="ehG-DR-2Zl"/>
-                            <outlet property="delegate" destination="PYO-75-Mca" id="4oF-VG-CYl"/>
+                            <outlet property="dataSource" destination="zm0-Oa-5Lg" id="qPF-zB-vnb"/>
+                            <outlet property="delegate" destination="zm0-Oa-5Lg" id="y8A-MX-54i"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J0g-v9-GrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htm-DQ-Zcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="141"/>
+            <point key="canvasLocation" x="1364" y="140.77961019490255"/>
         </scene>
         <!--Saving View Controller-->
         <scene sceneID="1Zs-sg-5n4">
@@ -291,7 +292,7 @@
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PYO-75-Mca" kind="show" id="UZ9-5r-922"/>
+                                    <segue destination="zm0-Oa-5Lg" kind="show" id="1Tw-nT-D08"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-bp-CMj">
@@ -300,6 +301,9 @@
                                 <state key="normal" title="GO &gt;">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="L1p-Gk-bk8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDg-9L-sGI">
                                 <rect key="frame" x="16" y="323" width="343" height="49"/>
@@ -359,6 +363,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CQS-UB-vBE"/>
+        <segue reference="1Tw-nT-D08"/>
+        <segue reference="L1p-Gk-bk8"/>
     </inferredMetricsTieBreakers>
 </document>

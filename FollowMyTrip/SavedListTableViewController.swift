@@ -8,9 +8,7 @@
 
 import UIKit
 
-class SavedListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var currentRow: String!
+class SavedListTableViewController: UITableViewController {
     
     var savedPositionNames = ["My car's position", "My tent's position", "A big moument in Paris","Another big monument in Paris"]
     
@@ -20,7 +18,7 @@ class SavedListTableViewController: UIViewController, UITableViewDelegate, UITab
     
     var savedPositionAltitudes = ["89.88","33.2","12.333","1.2222"]
     
-    var savedPositionComments = ["Wa's up right deh","Yuh get dat tune","Ruff up","Bend down","Bang bim"]
+    var savedPositionComments = ["Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh","Yuh get dat tune","Ruff up","Bend down","Bang bim"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,56 +31,50 @@ class SavedListTableViewController: UIViewController, UITableViewDelegate, UITab
     
     // MARK: - Table view data source
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.savedPositionNames.count
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SavedListTableViewCell
         cell.positionNameLabel.text = savedPositionNames[indexPath.row]
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Saved Locations"
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let headerTitle = view as? UITableViewHeaderFooterView {
-            headerTitle.backgroundColor = UIColor(red:0.56, green:0.82, blue:0.99, alpha:1.00)
+            headerTitle.tintColor = UIColor(red:0.56, green:0.82, blue:0.99, alpha:1.00)
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        currentRow = "jkbkj"
-        self.performSegue(withIdentifier: "DetailsView", sender: currentRow)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailsView" {
-//            var ind = sender as! Int
-//            print(ind)
             if let destinationVC = segue.destination as? DetailsViewController {
-                if let name = sender as? String {
-                    destinationVC.altitudeText = name
-                    print("hello")
+                if let cellIndex = self.tableView.indexPathsForSelectedRows {
+                	destinationVC.nameText = savedPositionNames[cellIndex[0][1]]
+                	destinationVC.latitudeText = "Latitude : \(savedPositionLatitudes[cellIndex[0][1]])"
+                	destinationVC.longitudeText = "Longitude : \(savedPositionLongitudes[cellIndex[0][1]])"
+                	destinationVC.altitudeText = "Altitude : \(savedPositionAltitudes[cellIndex[0][1]])"
+                	destinationVC.commentText = savedPositionComments[cellIndex[0][1]]
                 }
             }
-//            destinationVC.nameText = savedPositionNames[currentRow]
-//            destinationVC.latitudeText = savedPositionLatitudes[currentRow]
-//            destinationVC.longitudeText = savedPositionLongitudes[currentRow]
-//            destinationVC.altitudeText = savedPositionAltitudes[currentRow]
-//            destinationVC.commentText = savedPositionComments[currentRow]
         }
     }
     

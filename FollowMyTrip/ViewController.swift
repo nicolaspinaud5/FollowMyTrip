@@ -14,8 +14,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
     @IBOutlet weak var mapView: MKMapView!
     
-    var count:Int = 0
-    
     var locationManager:CLLocationManager?
     
     var currentLocation:CLLocation = CLLocation()
@@ -23,7 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var currentPositionPin:PositionPin?
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        locationManager?.stopUpdatingLocation()
+        locationManager?.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -31,10 +29,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-//        mapView.removeAnnotation(currentPositionPin!)
+        mapView.removeAnnotation(currentPositionPin!)
         currentLocation = (locationManager?.location)!
-//        currentPositionPin?.coordinate = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
-//        mapView.addAnnotation(currentPositionPin!)
+        currentPositionPin?.coordinate = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        mapView.addAnnotation(currentPositionPin!)
+//        print(userLocation.location?.altitude)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +52,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         mapView.delegate = self
         mapView.showsUserLocation = true
-        mapView.userTrackingMode = .follow
+        mapView.userTrackingMode = .followWithHeading
         
         currentLocation = (locationManager?.location)!
         currentPositionPin = PositionPin(title: "Position", subtitle: "Where you are", coordinate: CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude))
@@ -66,7 +65,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             destinationVC.longitudeText = "Longitude : \(self.currentLocation.coordinate.longitude)"
             destinationVC.altitudeText = "Altitude : \(self.currentLocation.altitude)"
         } else if segue.identifier == "ListView" {
-//            let destinationVC = segue.destination as! SavedListTableViewController
+            let destinationVC = segue.destination as! SavedListTableViewController
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
