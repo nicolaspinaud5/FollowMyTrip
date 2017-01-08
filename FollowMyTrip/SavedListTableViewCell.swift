@@ -12,6 +12,8 @@ class SavedListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var positionNameLabel: UILabel!
     
+    var locationId: Int8 = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

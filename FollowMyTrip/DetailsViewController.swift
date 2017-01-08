@@ -13,9 +13,9 @@ import CoreLocation
 class DetailsViewController: UIViewController {
     
     var nameText: String = ""
-    var latitudeText: String = ""
-    var longitudeText: String = ""
-    var altitudeText: String = ""
+    var latitude: CLLocationDegrees = 0.00
+    var longitude: CLLocationDegrees = 0.00
+    var altitude: CLLocationDegrees = 0.00
     var commentText:String = ""
     
     @IBOutlet weak var positionNameLabel: UILabel!
@@ -27,9 +27,9 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         positionNameLabel.text = nameText
-        positionLatitudeLabel.text = latitudeText
-        positionLongitudeLabel.text = longitudeText
-        positionAltitudeLabel.text = altitudeText
+        positionLatitudeLabel.text = "Latitude : \(latitude)"
+        positionLongitudeLabel.text = "Longitude : \(longitude)"
+        positionAltitudeLabel.text = "Altitude : \(altitude)"
         commentLabel.text = commentText
     }
     

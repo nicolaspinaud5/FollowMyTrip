@@ -7,22 +7,20 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SavedListTableViewController: UITableViewController {
     
-    var savedPositionNames = ["My car's position", "My tent's position", "A big moument in Paris","Another big monument in Paris"]
-    
-    var savedPositionLatitudes = ["19.8789","-109.71097","10.17091","-19.017907"]
-    
-    var savedPositionLongitudes = ["89.9779","-122.54456","17.1","-2.907"]
-    
-    var savedPositionAltitudes = ["89.88","33.2","12.333","1.2222"]
-    
-    var savedPositionComments = ["Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh Wa's up right deh","Yuh get dat tune","Ruff up","Bend down","Bang bim"]
+    var savedLocations: Results<Location>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        savedLocations = LocationManager.getAll()
+        let longpress = UILongPressGestureRecognizer(target: self, action: #selector(SavedListTableViewController.longPressDelete))
+        longpress.minimumPressDuration = 1.0
+        tableView.addGestureRecognizer(longpress)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,8 +30,10 @@ class SavedListTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.savedPositionNames.count
+        if let location = savedLocations {
+            return location.count
+        }
+        return 0
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,7 +42,10 @@ class SavedListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SavedListTableViewCell
-        cell.positionNameLabel.text = savedPositionNames[indexPath.row]
+        if let location = savedLocations {
+        	cell.positionNameLabel.text = location[indexPath.row].name
+            cell.locationId = location[indexPath.row].id
+        }
         return cell
     }
     
@@ -63,55 +66,38 @@ class SavedListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    func longPressDelete(gestureRecognizer: UIGestureRecognizer) {
+        let longPress = gestureRecognizer as! UILongPressGestureRecognizer
+        let state = longPress.state
+        let locationInView = longPress.location(in: tableView)
+        let indexPath = tableView.indexPathForRow(at: locationInView)
+        
+        switch state {
+        case UIGestureRecognizerState.began:
+            if indexPath != nil {
+                let cell = tableView.cellForRow(at: indexPath!) as! SavedListTableViewCell
+                LocationManager.delete(cell.locationId)
+                self.tableView.reloadData()
+            }
+        default:
+            break
+        }
+    }
+
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailsView" {
             if let destinationVC = segue.destination as? DetailsViewController {
                 if let cellIndex = self.tableView.indexPathsForSelectedRows {
-                	destinationVC.nameText = savedPositionNames[cellIndex[0][1]]
-                	destinationVC.latitudeText = "Latitude : \(savedPositionLatitudes[cellIndex[0][1]])"
-                	destinationVC.longitudeText = "Longitude : \(savedPositionLongitudes[cellIndex[0][1]])"
-                	destinationVC.altitudeText = "Altitude : \(savedPositionAltitudes[cellIndex[0][1]])"
-                	destinationVC.commentText = savedPositionComments[cellIndex[0][1]]
+                    if let location = savedLocations {
+                        destinationVC.nameText = location[cellIndex[0][1]].name
+                        destinationVC.latitude = location[cellIndex[0][1]].latitude
+                        destinationVC.longitude = location[cellIndex[0][1]].longitude
+                        destinationVC.altitude = location[cellIndex[0][1]].altitude
+                        destinationVC.commentText = location[cellIndex[0][1]].comment
+                    }
                 }
             }
         }
     }
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-     // MARK: - Navigation
 }

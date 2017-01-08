@@ -10,21 +10,21 @@ import Foundation
 import RealmSwift
 
 open class LocationManager {
-    let realm = try! Realm()
+    static var realm = try! Realm()
     
-    func create(name: String, latitude: Double, longitude: Double, altitude: Double, comment: String = ""){
+    class func create(name: String, latitude: Double, longitude: Double, altitude: Double, comment: String = ""){
     	try! realm.write {
     		realm.create(Location.self, value: ["name": name, "latitude": latitude, "longitude": longitude, "altitude": altitude, "comment": comment])
     	}
     }
     
-    func delete(_ id: Int8){
+    class func delete(_ id: Int8){
         try! realm.write {
             realm.delete(realm.objects(Location.self).filter("id = \(id)"))
         }
     }
     
-    func getAll() -> Results<Location>{
+    class func getAll() -> Results<Location>{
         return realm.objects(Location.self)
     }
 }

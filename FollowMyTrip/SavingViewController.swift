@@ -19,9 +19,8 @@ class SavingViewController: UIViewController {
     @IBOutlet weak var commentTextField: UITextField!
     
     @IBAction func saveAction(_ sender: Any) {
-        let locationMG = LocationManager()
         if let name = postionName.text, let comment = commentTextField.text, postionName.text != "" {
-        	locationMG.create(name: name, latitude: latitude, longitude: longitude, altitude: altitude, comment: comment)
+        	LocationManager.create(name: name, latitude: latitude, longitude: longitude, altitude: altitude, comment: comment)
         }
     }
     var latitude: CLLocationDegrees = 0.00
