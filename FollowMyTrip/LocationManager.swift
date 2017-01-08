@@ -13,9 +13,17 @@ open class LocationManager {
     static var realm = try! Realm()
     
     class func create(name: String, latitude: Double, longitude: Double, altitude: Double, comment: String = ""){
-    	try! realm.write {
-    		realm.create(Location.self, value: ["name": name, "latitude": latitude, "longitude": longitude, "altitude": altitude, "comment": comment])
-    	}
+        let maxId = realm.objects(Location.self).max(ofProperty: "id") as Int?
+        
+        var lastId: Int = 0
+        
+        if maxId != nil {
+        	lastId = maxId!
+        }
+        
+        try! realm.write {
+            realm.create(Location.self, value: ["id": lastId+1, "name": name, "latitude": latitude, "longitude": longitude, "altitude": altitude, "comment": comment])
+        }
     }
     
     class func delete(_ id: Int8){
