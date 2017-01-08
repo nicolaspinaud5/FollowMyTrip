@@ -87,7 +87,7 @@ class SavedListTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     self.dismiss(animated: true, completion: nil)
                 }
-                alertController.addAction(OKAction)
+                alertController.addAction(deleteAction)
                 
                 self.present(alertController, animated: true, completion: nil)
             }
