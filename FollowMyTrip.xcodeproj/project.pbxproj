@@ -24,6 +24,7 @@
 		DC8E85C91E1EDF4D005E3906 /* SavedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */; };
 		DC8E85CB1E1EEA8C005E3906 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */; };
 		DCC35F6D1E22845D00B4932D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC35F6C1E22845D00B4932D /* Location.swift */; };
+		DCED7B861E2293220005FDED /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCED7B851E2293220005FDED /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedListTableViewCell.swift; sourceTree = "<group>"; };
 		DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		DCC35F6C1E22845D00B4932D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DCED7B851E2293220005FDED /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DD15683296B5DDDF3266CBB4 /* Pods-FollowMyTripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowMyTripTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FollowMyTripTests/Pods-FollowMyTripTests.release.xcconfig"; sourceTree = "<group>"; };
 		F5714CA0434317AD00EF38DB /* Pods_FollowMyTripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowMyTripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,18 +144,14 @@
 		DC76E4581E1DE07A00773798 /* FollowMyTrip */ = {
 			isa = PBXGroup;
 			children = (
-				DCC35F6C1E22845D00B4932D /* Location.swift */,
+				DCED7B841E2293080005FDED /* Managers */,
+				DCED7B831E2292C10005FDED /* Models */,
+				DCED7B811E22929F0005FDED /* ViewControllers */,
 				DC76E4591E1DE07A00773798 /* AppDelegate.swift */,
-				DC76E45B1E1DE07A00773798 /* ViewController.swift */,
 				DC76E45D1E1DE07A00773798 /* Main.storyboard */,
 				DC76E4601E1DE07A00773798 /* Assets.xcassets */,
 				DC76E4621E1DE07A00773798 /* LaunchScreen.storyboard */,
 				DC76E4651E1DE07A00773798 /* Info.plist */,
-				DC76E48A1E1DEF8B00773798 /* PositionPin.swift */,
-				DC8E85C41E1ED5C9005E3906 /* SavingViewController.swift */,
-				DC8E85C61E1EDDA4005E3906 /* SavedListTableViewController.swift */,
-				DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */,
-				DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */,
 			);
 			path = FollowMyTrip;
 			sourceTree = "<group>";
@@ -185,6 +183,35 @@
 				F5714CA0434317AD00EF38DB /* Pods_FollowMyTripUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCED7B811E22929F0005FDED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC76E48A1E1DEF8B00773798 /* PositionPin.swift */,
+				DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */,
+				DC76E45B1E1DE07A00773798 /* ViewController.swift */,
+				DC8E85C41E1ED5C9005E3906 /* SavingViewController.swift */,
+				DC8E85C61E1EDDA4005E3906 /* SavedListTableViewController.swift */,
+				DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DCED7B831E2292C10005FDED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCC35F6C1E22845D00B4932D /* Location.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DCED7B841E2293080005FDED /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DCED7B851E2293220005FDED /* LocationManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +511,7 @@
 				DC8E85CB1E1EEA8C005E3906 /* DetailsViewController.swift in Sources */,
 				DC8E85C71E1EDDA4005E3906 /* SavedListTableViewController.swift in Sources */,
 				DC76E45A1E1DE07A00773798 /* AppDelegate.swift in Sources */,
+				DCED7B861E2293220005FDED /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

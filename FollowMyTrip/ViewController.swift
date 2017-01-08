@@ -61,11 +61,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SavingView" {
             let destinationVC = segue.destination as! SavingViewController
-            destinationVC.latitudeText = "Latitude : \(self.currentLocation.coordinate.latitude)"
-            destinationVC.longitudeText = "Longitude : \(self.currentLocation.coordinate.longitude)"
-            destinationVC.altitudeText = "Altitude : \(self.currentLocation.altitude)"
-        } else if segue.identifier == "ListView" {
-            let destinationVC = segue.destination as! SavedListTableViewController
+            destinationVC.latitude = self.currentLocation.coordinate.latitude
+            destinationVC.longitude = self.currentLocation.coordinate.longitude
+            destinationVC.altitude = self.currentLocation.altitude
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

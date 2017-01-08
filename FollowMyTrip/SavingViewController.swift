@@ -18,15 +18,21 @@ class SavingViewController: UIViewController {
     @IBOutlet weak var altitudeLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
     
-    var latitudeText: String = ""
-    var longitudeText: String = ""
-    var altitudeText: String = ""
-
+    @IBAction func saveAction(_ sender: Any) {
+        let locationMG = LocationManager()
+        if let name = postionName.text, let comment = commentTextField.text, postionName.text != "" {
+        	locationMG.create(name: name, latitude: latitude, longitude: longitude, altitude: altitude, comment: comment)
+        }
+    }
+    var latitude: CLLocationDegrees = 0.00
+    var longitude: CLLocationDegrees = 0.00
+    var altitude: CLLocationDegrees = 0.00
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        latitudeLabel.text = latitudeText
-        longitudeLabel.text = longitudeText
-        altitudeLabel.text = altitudeText
+        latitudeLabel.text = "Latitude : \(latitude)"
+        longitudeLabel.text = "Longitude : \(longitude)"
+        altitudeLabel.text = "Altitude : \(altitude)"
     }
     
     override func didReceiveMemoryWarning() {
