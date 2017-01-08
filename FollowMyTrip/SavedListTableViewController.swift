@@ -76,8 +76,20 @@ class SavedListTableViewController: UITableViewController {
         case UIGestureRecognizerState.began:
             if indexPath != nil {
                 let cell = tableView.cellForRow(at: indexPath!) as! SavedListTableViewCell
-                LocationManager.delete(cell.locationId)
-                self.tableView.reloadData()
+                let alertController = UIAlertController(title: "Confirm that you want to delete this location", message: "", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction!) in
+                }
+                alertController.addAction(cancelAction)
+                
+                let OKAction = UIAlertAction(title: "Delete", style: .default) { (action:UIAlertAction!) in
+                    LocationManager.delete(cell.locationId)
+                    self.tableView.reloadData()
+                    self.dismiss(animated: true, completion: nil)
+                }
+                alertController.addAction(OKAction)
+                
+                self.present(alertController, animated: true, completion: nil)
             }
         default:
             break
