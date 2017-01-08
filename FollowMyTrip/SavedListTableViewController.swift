@@ -85,7 +85,9 @@ class SavedListTableViewController: UITableViewController {
                 let deleteAction = UIAlertAction(title: "Delete", style: .default) { (action:UIAlertAction!) in
                     LocationManager.delete(cell.locationId)
                     self.tableView.reloadData()
-                    self.dismiss(animated: true, completion: nil)
+                    if LocationManager.getAll().isEmpty {
+                    	self.dismiss(animated: true, completion: nil)
+                    }
                 }
                 alertController.addAction(deleteAction)
                 
