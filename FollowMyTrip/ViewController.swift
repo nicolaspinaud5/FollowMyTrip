@@ -21,7 +21,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var currentPositionPin:PositionPin?
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locationManager?.stopUpdatingLocation()
+        mapView.removeAnnotation(currentPositionPin!)
+        currentLocation = (locationManager?.location)!
+        currentPositionPin?.coordinate = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        mapView.addAnnotation(currentPositionPin!)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -29,11 +32,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        mapView.removeAnnotation(currentPositionPin!)
-        currentLocation = (locationManager?.location)!
-        currentPositionPin?.coordinate = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
-        mapView.addAnnotation(currentPositionPin!)
-//        print(userLocation.location?.altitude)
     }
     
     override func viewDidAppear(_ animated: Bool) {
