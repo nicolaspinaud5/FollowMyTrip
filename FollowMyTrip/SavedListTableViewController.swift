@@ -104,11 +104,7 @@ class SavedListTableViewController: UITableViewController {
             if let destinationVC = segue.destination as? DetailsViewController {
                 if let cellIndex = self.tableView.indexPathsForSelectedRows {
                     if let location = savedLocations {
-                        destinationVC.nameText = location[cellIndex[0][1]].name
-                        destinationVC.latitude = location[cellIndex[0][1]].latitude
-                        destinationVC.longitude = location[cellIndex[0][1]].longitude
-                        destinationVC.altitude = location[cellIndex[0][1]].altitude
-                        destinationVC.commentText = location[cellIndex[0][1]].comment
+                        destinationVC.location = location[cellIndex[0][1]]
                     }
                 }
             }

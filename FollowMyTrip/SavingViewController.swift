@@ -17,6 +17,7 @@ class SavingViewController: UIViewController {
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var altitudeLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     @IBAction func saveAction(_ sender: Any) {
         if let name = postionName.text, let comment = commentTextField.text, postionName.text != "" {
@@ -29,6 +30,7 @@ class SavingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton.layer.cornerRadius = 10
         latitudeLabel.text = "Latitude : \(latitude)"
         longitudeLabel.text = "Longitude : \(longitude)"
         altitudeLabel.text = "Altitude : \(altitude)"

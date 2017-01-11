@@ -82,6 +82,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xQJ-Jn-A4j">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.47943340639999998" green="0.77771632189999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ZcY-Wi-dch" customClass="SavedListTableViewCell" customModule="FollowMyTrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -225,6 +233,7 @@
                         <outlet property="latitudeLabel" destination="gO2-oE-ylF" id="7YT-5Y-hk1"/>
                         <outlet property="longitudeLabel" destination="Bri-PG-Wrc" id="bxp-82-YRZ"/>
                         <outlet property="postionName" destination="iri-Wo-R82" id="mRy-NX-S9r"/>
+                        <outlet property="saveButton" destination="ART-0h-hNx" id="htq-fo-NjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WE6-1r-cgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,7 +312,7 @@
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="L1p-Gk-bk8"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backToMap" id="L1p-Gk-bk8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDg-9L-sGI">
@@ -351,7 +360,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="ttM-q0-H7k" id="IqM-P6-wvH"/>
                         <outlet property="commentLabel" destination="ZDg-9L-sGI" id="uPR-J8-iem"/>
+                        <outlet property="goButton" destination="U7C-bp-CMj" id="KxG-zX-LEX"/>
                         <outlet property="positionAltitudeLabel" destination="zBe-Py-eKX" id="eAB-fc-8GA"/>
                         <outlet property="positionLatitudeLabel" destination="V5Z-3m-hNl" id="nZT-Ey-tq1"/>
                         <outlet property="positionLongitudeLabel" destination="SYc-fw-N7t" id="k1m-TR-taz"/>
@@ -364,7 +375,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="L1p-Gk-bk8"/>
         <segue reference="1Tw-nT-D08"/>
+        <segue reference="L1p-Gk-bk8"/>
     </inferredMetricsTieBreakers>
 </document>
