@@ -21,15 +21,25 @@ class SavingViewController: UIViewController {
     
     @IBAction func saveAction(_ sender: Any) {
         if let name = postionName.text, let comment = commentTextField.text, postionName.text != "" {
-        	LocationManager.create(name: name, latitude: latitude, longitude: longitude, altitude: altitude, comment: comment)
+            if let new = location {
+                LocationManager.update(id: new.id, name: new.name, latitude: new.latitude, longitude: new.longitude, altitude: new.altitude)
+            } else {
+                LocationManager.create(name: name, latitude: latitude, longitude: longitude, altitude: altitude, comment: comment)
+            }
         }
     }
     var latitude: CLLocationDegrees = 0.00
     var longitude: CLLocationDegrees = 0.00
     var altitude: CLLocationDegrees = 0.00
+    var location: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let new = location {
+            latitude = new.latitude
+            longitude = new.longitude
+            altitude = new.altitude
+        }
         saveButton.layer.cornerRadius = 10
         latitudeLabel.text = "Latitude : \(latitude)"
         longitudeLabel.text = "Longitude : \(longitude)"

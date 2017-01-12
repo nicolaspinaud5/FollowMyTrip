@@ -26,6 +26,12 @@ open class LocationManager {
         }
     }
     
+    class func update(id: Int8, name: String, latitude: Double, longitude: Double, altitude: Double, comment: String = ""){
+        try! realm.write {
+            realm.create(Location.self, value: ["id": id, "name": name, "latitude": latitude, "longitude": longitude, "altitude": altitude, "comment": comment], update: true)
+        }
+    }
+    
     class func delete(_ id: Int8){
         try! realm.write {
             realm.delete(realm.objects(Location.self).filter("id = \(id)"))

@@ -80,9 +80,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SavingView" {
             let destinationVC = segue.destination as! SavingViewController
-            destinationVC.latitude = self.currentLocation.coordinate.latitude
-            destinationVC.longitude = self.currentLocation.coordinate.longitude
-            destinationVC.altitude = self.currentLocation.altitude
+            if let new = newLocation {
+                destinationVC.location = new
+            } else {
+                destinationVC.latitude = self.currentLocation.coordinate.latitude
+                destinationVC.longitude = self.currentLocation.coordinate.longitude
+                destinationVC.altitude = self.currentLocation.altitude
+
+            }
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
