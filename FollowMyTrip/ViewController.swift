@@ -22,31 +22,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var newLocation:Location?
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let pin = currentPositionPin {
-            mapView.removeAnnotation(pin)
-        }
-        
-        if let new = newLocation {
-            currentLocation = CLLocation(latitude: new.latitude, longitude: new.longitude)
-        } else {
-            currentLocation = (locationManager?.location)!
-        }
-        currentPositionPin?.coordinate = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
-        mapView.addAnnotation(currentPositionPin!)
-	}
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
-    }
-    
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-    }
-    
-    func goToNewLocation(location: Location){
-        newLocation = location
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
@@ -63,18 +38,45 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         mapView.delegate = self
         mapView.showsUserLocation = true
-        mapView.userTrackingMode = .followWithHeading
+        mapView.userTrackingMode = .follow
         
         if let new = newLocation {
             mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: new.latitude, longitude: new.longitude), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)), animated: true)
             
             currentPositionPin = PositionPin(title: new.name, subtitle: "\(new.latitude) : \(new.longitude)", coordinate: CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude))
         } else {
-            currentLocation = (locationManager?.location)!
+            if locationManager?.location != nil {
+            	currentLocation = (locationManager?.location)!
+            }
             
             currentPositionPin = PositionPin(title: "Position", subtitle: "Where you are", coordinate: CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude))
         }
         mapView.addAnnotation(currentPositionPin!)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let pin = currentPositionPin {
+            mapView.removeAnnotation(pin)
+        }
+        
+        if let new = newLocation {
+            currentLocation = CLLocation(latitude: new.latitude, longitude: new.longitude)
+        } else {
+            currentLocation = (locationManager?.location)!
+        }
+        currentPositionPin?.coordinate = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        mapView.addAnnotation(currentPositionPin!)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    }
+    
+    func goToNewLocation(location: Location){
+        newLocation = location
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
