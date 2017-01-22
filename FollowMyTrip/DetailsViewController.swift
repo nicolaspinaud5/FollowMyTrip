@@ -19,18 +19,21 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var positionLongitudeLabel: UILabel!
     @IBOutlet weak var positionAltitudeLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var goButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backButton.layer.cornerRadius = 10
-        goButton.layer.cornerRadius = 10
         positionNameLabel.text = location.name
         positionLatitudeLabel.text = "Latitude : \(location.latitude)"
         positionLongitudeLabel.text = "Longitude : \(location.longitude)"
         positionAltitudeLabel.text = "Altitude : \(location.altitude)"
         commentLabel.text = location.comment
+        let goButton = UIBarButtonItem(title: "Go", style: UIBarButtonItemStyle.plain, target: self, action: #selector(DetailsViewController.goToNewLocation(_:)))
+        self.navigationItem.rightBarButtonItem = goButton
+    }
+    
+    func goToNewLocation(_ sender:UIBarButtonItem!)
+    {
+        self.performSegue(withIdentifier: "backToMap", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

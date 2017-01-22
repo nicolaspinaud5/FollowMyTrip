@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 
+//Classe Location (entité Realm) permettant la sauvegarde d'une position en base de donnée
+
 class Location: Object {
     dynamic var id: Int8 = 0
     dynamic var name: String = ""

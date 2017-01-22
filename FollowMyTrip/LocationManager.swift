@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 
+//Class static LocationManager permettant les intéractions avec la base de donnée
+
 open class LocationManager {
     static var realm = try! Realm()
     

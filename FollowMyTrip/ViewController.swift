@@ -22,12 +22,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var newLocation:Location?
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Follow My Trip"
         
         locationManager = CLLocationManager()
         locationManager!.delegate = self
