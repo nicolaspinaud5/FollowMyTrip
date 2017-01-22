@@ -8,6 +8,9 @@
 
 import UIKit
 
+/// Cette classe permet de personaliser la cellule de base UITableViewCell
+/// On lui à ajouté un locationId permettant de faire l'association entre une cellule et une Location enregistrée en base de donnée
+
 class SavedListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var positionNameLabel: UILabel!
@@ -16,6 +19,5 @@ class SavedListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 }

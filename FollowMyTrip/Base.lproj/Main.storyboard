@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vle-q2-ooS">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vle-q2-ooS">
                                 <rect key="frame" x="0.0" y="44" width="375" height="634"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eax-sm-I6F">
@@ -48,13 +48,13 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zm0-Oa-5Lg" kind="show" identifier="ListView" id="k4f-gY-g6g"/>
+                                    <segue destination="zm0-Oa-5Lg" kind="showDetail" identifier="LocationListView" action="showViewController:sender:" id="k4f-gY-g6g"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vle-q2-ooS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="5Mq-MU-0y7"/>
+                            <constraint firstItem="vle-q2-ooS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="5Mq-MU-0y7"/>
                             <constraint firstItem="QIz-93-EJf" firstAttribute="height" secondItem="Eax-sm-I6F" secondAttribute="height" id="F9w-JY-ziC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QIz-93-EJf" secondAttribute="trailing" constant="-16" id="L60-pg-Rbu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vle-q2-ooS" secondAttribute="bottom" constant="-11" id="N1o-7f-5kL"/>
@@ -111,7 +111,7 @@
                                 <color key="backgroundColor" red="0.80231511779999998" green="0.77771632189999995" blue="0.64539191829999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="positionNameLabel" destination="zM7-fm-fkK" id="Ty4-bf-gOg"/>
-                                    <segue destination="B1B-8n-Hgz" kind="show" identifier="DetailsView" id="av6-c0-H2H"/>
+                                    <segue destination="B1B-8n-Hgz" kind="showDetail" identifier="DetailsView" action="showViewController:sender:" id="av6-c0-H2H"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -274,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position's name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-pf-m54">
-                                <rect key="frame" x="16" y="28" width="343" height="33"/>
+                                <rect key="frame" x="16" y="-16" width="343" height="77"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -370,7 +370,7 @@
                         <outlet property="positionLatitudeLabel" destination="V5Z-3m-hNl" id="nZT-Ey-tq1"/>
                         <outlet property="positionLongitudeLabel" destination="SYc-fw-N7t" id="k1m-TR-taz"/>
                         <outlet property="positionNameLabel" destination="A3t-eS-yDr" id="4sw-7R-aCG"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToMap" id="jjO-vc-Jcy"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="BackToMapView" action="showViewController:sender:" id="jjO-vc-Jcy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGm-Pw-HQI" userLabel="First Responder" sceneMemberID="firstResponder"/>

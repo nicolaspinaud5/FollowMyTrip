@@ -192,8 +192,8 @@
 				DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */,
 				DC76E45B1E1DE07A00773798 /* ViewController.swift */,
 				DC8E85C41E1ED5C9005E3906 /* SavingViewController.swift */,
-				DC8E85C61E1EDDA4005E3906 /* SavedListTableViewController.swift */,
 				DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */,
+				DC8E85C61E1EDDA4005E3906 /* SavedListTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

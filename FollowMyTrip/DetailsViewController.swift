@@ -10,9 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
+/// Controller gérant l'affichage des détails d'une Location
 class DetailsViewController: UIViewController {
     
-    var location: Location = Location()
+    var selectedLocation: Location = Location()
     
     @IBOutlet weak var positionNameLabel: UILabel!
     @IBOutlet weak var positionLatitudeLabel: UILabel!
@@ -22,29 +23,41 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        positionNameLabel.text = location.name
-        positionLatitudeLabel.text = "Latitude : \(location.latitude)"
-        positionLongitudeLabel.text = "Longitude : \(location.longitude)"
-        positionAltitudeLabel.text = "Altitude : \(location.altitude)"
-        commentLabel.text = location.comment
-        let goButton = UIBarButtonItem(title: "Go", style: UIBarButtonItemStyle.plain, target: self, action: #selector(DetailsViewController.goToNewLocation(_:)))
+
+        /// On assigne au propriétés affichéés dans cette vue les latitude, longitude et altitude, nom de location et commentaires de location transmis par le SavedListTableViewController via le segue
+        positionNameLabel.text = selectedLocation.name
+        positionLatitudeLabel.text = "Latitude : \(selectedLocation.latitude)"
+        positionLongitudeLabel.text = "Longitude : \(selectedLocation.longitude)"
+        positionAltitudeLabel.text = "Altitude : \(selectedLocation.altitude)"
+        commentLabel.text = selectedLocation.comment
+        
+        /// On crée un élément un boutton de type UIBarButtonItem qui va déclencher la fonction goToNewLocation()
+        let goButton = UIBarButtonItem(title: "Go", style: UIBarButtonItemStyle.plain, target: self, action: #selector(DetailsViewController.goToSelectedLocation(_:)))
+        
+        /// On place ce button dans la navigationBar en tant qu'item positionné à droite
         self.navigationItem.rightBarButtonItem = goButton
     }
     
-    func goToNewLocation(_ sender:UIBarButtonItem!)
+    /// Cette fonction déclenche le segue avec l'identifier BackToMapView
+    func goToSelectedLocation(_ sender:UIBarButtonItem!)
     {
-        self.performSegue(withIdentifier: "backToMap", sender: self)
+        self.performSegue(withIdentifier: "BackToMapView", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "backToMap" {
+        
+        /// On vérifie que le segue déclenché porte l'identifier "BackToMapView"
+        if segue.identifier == "BackToMapView" {
+            
+            /// Si c'est le cas on vérifie qu'il y a un Controller de destination et on le récupère en tant que ViewController
             if let destinationVC = segue.destination as? ViewController {
-                destinationVC.goToNewLocation(location: location)
+                
+                /// On appelle la fonction goToNewLocation du ViewController avec la Location courante
+                destinationVC.goToNewLocation(location: selectedLocation)
             }
     	}
     }
