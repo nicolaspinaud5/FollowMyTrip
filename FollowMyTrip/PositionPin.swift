@@ -8,6 +8,8 @@
 
 import MapKit
 
+/// Cette classe implémente le Protocol MKAnnotation, étant un point placé à une position
+
 class PositionPin: NSObject, MKAnnotation {
     var title: String?
     var subtitle: String?

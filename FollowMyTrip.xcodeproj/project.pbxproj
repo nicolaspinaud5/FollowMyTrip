@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		259E55D33EB7B55B62EAE255 /* Pods_FollowMyTripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5714CA0434317AD00EF38DB /* Pods_FollowMyTripUITests.framework */; };
+		B042473EBDC5A29A28AADA8F /* Pods_FollowMyTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1C9D569A4F4EFB1A63495F /* Pods_FollowMyTrip.framework */; };
+		D9DF051F4DE2F4BCFB373032 /* Pods_FollowMyTripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FE60C08F75E837AF01EA56 /* Pods_FollowMyTripTests.framework */; };
 		DC76E45A1E1DE07A00773798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76E4591E1DE07A00773798 /* AppDelegate.swift */; };
 		DC76E45C1E1DE07A00773798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76E45B1E1DE07A00773798 /* ViewController.swift */; };
 		DC76E45F1E1DE07A00773798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC76E45D1E1DE07A00773798 /* Main.storyboard */; };
@@ -20,6 +23,8 @@
 		DC8E85C71E1EDDA4005E3906 /* SavedListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E85C61E1EDDA4005E3906 /* SavedListTableViewController.swift */; };
 		DC8E85C91E1EDF4D005E3906 /* SavedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */; };
 		DC8E85CB1E1EEA8C005E3906 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */; };
+		DCC35F6D1E22845D00B4932D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC35F6C1E22845D00B4932D /* Location.swift */; };
+		DCED7B861E2293220005FDED /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCED7B851E2293220005FDED /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		259534DA9D4D6AA62D8C2A23 /* Pods-FollowMyTripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowMyTripUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FollowMyTripUITests/Pods-FollowMyTripUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5901A120296B9FAEC12070B3 /* Pods-FollowMyTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowMyTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FollowMyTrip/Pods-FollowMyTrip.debug.xcconfig"; sourceTree = "<group>"; };
+		61137C6499CE5C7CEF5AA145 /* Pods-FollowMyTripUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowMyTripUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FollowMyTripUITests/Pods-FollowMyTripUITests.release.xcconfig"; sourceTree = "<group>"; };
+		78FE60C08F75E837AF01EA56 /* Pods_FollowMyTripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowMyTripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1C9D569A4F4EFB1A63495F /* Pods_FollowMyTrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowMyTrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E9761E9CA44DFA0733AE1FA /* Pods-FollowMyTripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowMyTripTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FollowMyTripTests/Pods-FollowMyTripTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF21549411096C5919F8DB21 /* Pods-FollowMyTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowMyTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-FollowMyTrip/Pods-FollowMyTrip.release.xcconfig"; sourceTree = "<group>"; };
 		DC76E4561E1DE07A00773798 /* FollowMyTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMyTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC76E4591E1DE07A00773798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC76E45B1E1DE07A00773798 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +71,10 @@
 		DC8E85C61E1EDDA4005E3906 /* SavedListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedListTableViewController.swift; sourceTree = "<group>"; };
 		DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedListTableViewCell.swift; sourceTree = "<group>"; };
 		DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		DCC35F6C1E22845D00B4932D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DCED7B851E2293220005FDED /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		DD15683296B5DDDF3266CBB4 /* Pods-FollowMyTripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FollowMyTripTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FollowMyTripTests/Pods-FollowMyTripTests.release.xcconfig"; sourceTree = "<group>"; };
+		F5714CA0434317AD00EF38DB /* Pods_FollowMyTripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FollowMyTripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC76E4891E1DE09100773798 /* MapKit.framework in Frameworks */,
+				B042473EBDC5A29A28AADA8F /* Pods_FollowMyTrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9DF051F4DE2F4BCFB373032 /* Pods_FollowMyTripTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,12 +99,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259E55D33EB7B55B62EAE255 /* Pods_FollowMyTripUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3B90D5E1EC30F3A8C491B4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5901A120296B9FAEC12070B3 /* Pods-FollowMyTrip.debug.xcconfig */,
+				BF21549411096C5919F8DB21 /* Pods-FollowMyTrip.release.xcconfig */,
+				8E9761E9CA44DFA0733AE1FA /* Pods-FollowMyTripTests.debug.xcconfig */,
+				DD15683296B5DDDF3266CBB4 /* Pods-FollowMyTripTests.release.xcconfig */,
+				259534DA9D4D6AA62D8C2A23 /* Pods-FollowMyTripUITests.debug.xcconfig */,
+				61137C6499CE5C7CEF5AA145 /* Pods-FollowMyTripUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DC76E44D1E1DE07A00773798 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +127,7 @@
 				DC76E4781E1DE07A00773798 /* FollowMyTripUITests */,
 				DC76E4571E1DE07A00773798 /* Products */,
 				DC76E4871E1DE09100773798 /* Frameworks */,
+				A3B90D5E1EC30F3A8C491B4D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,17 +144,14 @@
 		DC76E4581E1DE07A00773798 /* FollowMyTrip */ = {
 			isa = PBXGroup;
 			children = (
+				DCED7B841E2293080005FDED /* Managers */,
+				DCED7B831E2292C10005FDED /* Models */,
+				DCED7B811E22929F0005FDED /* ViewControllers */,
 				DC76E4591E1DE07A00773798 /* AppDelegate.swift */,
-				DC76E45B1E1DE07A00773798 /* ViewController.swift */,
 				DC76E45D1E1DE07A00773798 /* Main.storyboard */,
 				DC76E4601E1DE07A00773798 /* Assets.xcassets */,
 				DC76E4621E1DE07A00773798 /* LaunchScreen.storyboard */,
 				DC76E4651E1DE07A00773798 /* Info.plist */,
-				DC76E48A1E1DEF8B00773798 /* PositionPin.swift */,
-				DC8E85C41E1ED5C9005E3906 /* SavingViewController.swift */,
-				DC8E85C61E1EDDA4005E3906 /* SavedListTableViewController.swift */,
-				DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */,
-				DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */,
 			);
 			path = FollowMyTrip;
 			sourceTree = "<group>";
@@ -148,8 +178,40 @@
 			isa = PBXGroup;
 			children = (
 				DC76E4881E1DE09100773798 /* MapKit.framework */,
+				7F1C9D569A4F4EFB1A63495F /* Pods_FollowMyTrip.framework */,
+				78FE60C08F75E837AF01EA56 /* Pods_FollowMyTripTests.framework */,
+				F5714CA0434317AD00EF38DB /* Pods_FollowMyTripUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCED7B811E22929F0005FDED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC76E48A1E1DEF8B00773798 /* PositionPin.swift */,
+				DC8E85C81E1EDF4D005E3906 /* SavedListTableViewCell.swift */,
+				DC76E45B1E1DE07A00773798 /* ViewController.swift */,
+				DC8E85C41E1ED5C9005E3906 /* SavingViewController.swift */,
+				DC8E85CA1E1EEA8C005E3906 /* DetailsViewController.swift */,
+				DC8E85C61E1EDDA4005E3906 /* SavedListTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DCED7B831E2292C10005FDED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCC35F6C1E22845D00B4932D /* Location.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DCED7B841E2293080005FDED /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DCED7B851E2293220005FDED /* LocationManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC76E47E1E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTrip" */;
 			buildPhases = (
+				9FFD2C0C7394D9DF76317D9E /* [CP] Check Pods Manifest.lock */,
 				DC76E4521E1DE07A00773798 /* Sources */,
 				DC76E4531E1DE07A00773798 /* Frameworks */,
 				DC76E4541E1DE07A00773798 /* Resources */,
+				0C5237E2755833C199E66CDA /* [CP] Embed Pods Frameworks */,
+				8CBF605D6F7ABD1BDE8E0D02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC76E4811E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTripTests" */;
 			buildPhases = (
+				F12D2C37DE672E61B570718F /* [CP] Check Pods Manifest.lock */,
 				DC76E4661E1DE07A00773798 /* Sources */,
 				DC76E4671E1DE07A00773798 /* Frameworks */,
 				DC76E4681E1DE07A00773798 /* Resources */,
+				18EC09737FFB42681F7120A9 /* [CP] Embed Pods Frameworks */,
+				3A6E74EFDF6C922B52B048EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,9 +262,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC76E4841E1DE07A00773798 /* Build configuration list for PBXNativeTarget "FollowMyTripUITests" */;
 			buildPhases = (
+				F44C74FEB294C43D710C32EC /* [CP] Check Pods Manifest.lock */,
 				DC76E4711E1DE07A00773798 /* Sources */,
 				DC76E4721E1DE07A00773798 /* Frameworks */,
 				DC76E4731E1DE07A00773798 /* Resources */,
+				4CEA0877C3B3E632A19187E5 /* [CP] Embed Pods Frameworks */,
+				BB62D645C4A546E709E6FA69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,6 +360,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C5237E2755833C199E66CDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowMyTrip/Pods-FollowMyTrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18EC09737FFB42681F7120A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowMyTripTests/Pods-FollowMyTripTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A6E74EFDF6C922B52B048EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowMyTripTests/Pods-FollowMyTripTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CEA0877C3B3E632A19187E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowMyTripUITests/Pods-FollowMyTripUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CBF605D6F7ABD1BDE8E0D02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowMyTrip/Pods-FollowMyTrip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FFD2C0C7394D9DF76317D9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB62D645C4A546E709E6FA69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FollowMyTripUITests/Pods-FollowMyTripUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F12D2C37DE672E61B570718F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F44C74FEB294C43D710C32EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC76E4521E1DE07A00773798 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -296,11 +505,13 @@
 			files = (
 				DC76E48B1E1DEF8B00773798 /* PositionPin.swift in Sources */,
 				DC8E85C91E1EDF4D005E3906 /* SavedListTableViewCell.swift in Sources */,
+				DCC35F6D1E22845D00B4932D /* Location.swift in Sources */,
 				DC76E45C1E1DE07A00773798 /* ViewController.swift in Sources */,
 				DC8E85C51E1ED5C9005E3906 /* SavingViewController.swift in Sources */,
 				DC8E85CB1E1EEA8C005E3906 /* DetailsViewController.swift in Sources */,
 				DC8E85C71E1EDDA4005E3906 /* SavedListTableViewController.swift in Sources */,
 				DC76E45A1E1DE07A00773798 /* AppDelegate.swift in Sources */,
+				DCED7B861E2293220005FDED /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,14 +584,22 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M4HUHE4B9M;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/nicolaspinaud/Library/Developer/Xcode/DerivedData/FollowMyTrip-bkiahyejukcrssgxsxhltrkkazuf/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/**",
+					"/Users/nicolaspinaud/Library/Developer/Xcode/DerivedData/FollowMyTrip-bkiahyejukcrssgxsxhltrkkazuf/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/**",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -398,6 +617,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -423,14 +644,22 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = M4HUHE4B9M;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/nicolaspinaud/Library/Developer/Xcode/DerivedData/FollowMyTrip-bkiahyejukcrssgxsxhltrkkazuf/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework/**",
+					"/Users/nicolaspinaud/Library/Developer/Xcode/DerivedData/FollowMyTrip-bkiahyejukcrssgxsxhltrkkazuf/Build/Products/Debug-iphonesimulator/Realm/Realm.framework/**",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -441,6 +670,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,34 +681,43 @@
 		};
 		DC76E47F1E1DE07A00773798 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5901A120296B9FAEC12070B3 /* Pods-FollowMyTrip.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M4HUHE4B9M;
 				INFOPLIST_FILE = FollowMyTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.van.FollowMyTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		DC76E4801E1DE07A00773798 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF21549411096C5919F8DB21 /* Pods-FollowMyTrip.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M4HUHE4B9M;
 				INFOPLIST_FILE = FollowMyTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.van.FollowMyTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		DC76E4821E1DE07A00773798 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E9761E9CA44DFA0733AE1FA /* Pods-FollowMyTripTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = M4HUHE4B9M;
 				INFOPLIST_FILE = FollowMyTripTests/Info.plist;
@@ -491,8 +731,9 @@
 		};
 		DC76E4831E1DE07A00773798 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD15683296B5DDDF3266CBB4 /* Pods-FollowMyTripTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = M4HUHE4B9M;
 				INFOPLIST_FILE = FollowMyTripTests/Info.plist;
@@ -506,8 +747,9 @@
 		};
 		DC76E4851E1DE07A00773798 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 259534DA9D4D6AA62D8C2A23 /* Pods-FollowMyTripUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = M4HUHE4B9M;
 				INFOPLIST_FILE = FollowMyTripUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -520,8 +762,9 @@
 		};
 		DC76E4861E1DE07A00773798 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61137C6499CE5C7CEF5AA145 /* Pods-FollowMyTripUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = M4HUHE4B9M;
 				INFOPLIST_FILE = FollowMyTripUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
