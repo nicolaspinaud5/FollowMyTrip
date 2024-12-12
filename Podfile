@@ -6,7 +6,7 @@ target 'FollowMyTrip' do
   use_frameworks!
 
   # Pods for FollowMyTrip
-  pod 'RealmSwift', '~> 2.1.2'
+  pod 'RealmSwift', '~> 20.0.0'
 
   target 'FollowMyTripTests' do
     inherit! :search_paths
